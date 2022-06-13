@@ -3,11 +3,9 @@ import React from "react";
 import ListCard from "./ListCard";
 import ListItem from "./ListItem";
 
-export type CreateCardProps = {};
-
-const CreateCard = (props: CreateCardProps) => {
+const CreateCard = () => {
   return (
-    <ListCard title="My Work">
+    <ListCard title="Create">
       <ListItem>
         <Anchor>
           <Text variant="subheading">Change Order</Text>

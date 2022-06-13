@@ -8,7 +8,6 @@ const IModelsCard = () => (
     <div className={styles["title"]}>
       <Text variant="subheading">iModels</Text>
     </div>
-    <div className={styles["items"]}>
       <Carousel>
         <Carousel.Slider>
           <Carousel.Slide>
@@ -29,7 +28,6 @@ const IModelsCard = () => (
         </Carousel.Slider>
         <Carousel.Navigation />
       </Carousel>
-    </div>
   </Surface>
 );
 

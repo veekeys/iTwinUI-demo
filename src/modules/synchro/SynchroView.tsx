@@ -5,17 +5,71 @@ import RecentActivityCard from "./components/RecentActivityCard";
 import HeadCard from "./components/HeadCard";
 import IModelsCard from "./components/iModelsCard";
 import SummaryCard from "./components/SummaryCard";
+import { Grid } from "@itwin/itwinui-layouts-react";
+import "@itwin/itwinui-layouts-css/styles.css";
 
 const SynchroView = () => {
   return (
-    <>
-      <HeadCard />
-      <RecentActivityCard />
-      <MyWorkCard />
-      <CreateCard />
-      <IModelsCard />
-      <SummaryCard />
-    </>
+      <Grid>
+        <Grid.Item columnSpan={12}>
+          <HeadCard />
+        </Grid.Item>
+        <Grid.Item
+          columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 6,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}
+        >
+          <RecentActivityCard />
+        </Grid.Item>
+        <Grid.Item
+          columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 6,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}
+        >
+          <MyWorkCard />
+        </Grid.Item>
+        <Grid.Item
+          columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 6,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}
+        >
+          <CreateCard />
+        </Grid.Item>
+        <Grid.Item
+          columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 6,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}
+        >
+          <IModelsCard />
+        </Grid.Item>
+        <Grid.Item
+          columnSpan={{
+            monitor: 8,
+            smallMonitor: 8,
+            tablet: 12,
+            landscapeMobile: 12,
+            mobile: 12,
+          }}
+        >
+          <SummaryCard />
+        </Grid.Item>
+      </Grid>
   );
 };
 

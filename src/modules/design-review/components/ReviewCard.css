@@ -1,0 +1,21 @@
+.review-card-surface {
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-card-icon {
+  fill: #c7ccd1;
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+}
+
+.review-card-side-text {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

@@ -1,0 +1,27 @@
+@import "@itwin/itwinui-css/scss/variables";
+
+.synchro-list-card {
+  display: grid;
+  grid-template:
+    "title" auto
+    "items" 1fr
+    "footer" auto;
+}
+
+.card-title {
+  grid-area: title;
+  padding: $iui-baseline $iui-l;
+  border-bottom: 1px solid var(--iui-color-background-border);
+}
+
+.card-items {
+  grid-area: items;
+  height: 500px;
+}
+
+.card-footer {
+  grid-area: footer;
+  padding: $iui-baseline $iui-l;
+  text-align: center;
+  border-top: 1px solid var(--iui-color-background-border);
+}

@@ -1,0 +1,52 @@
+@import "@itwin/itwinui-css/scss/variables";
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  padding: $iui-baseline $iui-l;
+  gap: $iui-baseline;
+
+  :global {
+    .iui-tabs-content {
+      display: flex;
+    }
+  }
+
+  .left {
+    border-right: 1px solid var(--iui-color-background-border);
+    padding: $iui-baseline $iui-l;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    .item-times {
+      display: flex;
+      flex-direction: column;
+      gap: $iui-baseline * 0.5;
+      margin-top: $iui-baseline * 2;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: $iui-s;
+
+        svg {
+          width: $iui-icons-default;
+          height: $iui-icons-default;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  .right {
+    padding: $iui-baseline $iui-l;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $iui-baseline * 2 $iui-l;
+
+    > div {
+      width: 160px;
+    }
+  }
+}

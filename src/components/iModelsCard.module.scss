@@ -1,0 +1,25 @@
+@import "@itwin/itwinui-css/scss/variables";
+
+.imodels-card {
+  .title {
+    padding: $iui-baseline $iui-l;
+    border-bottom: 1px solid var(--iui-color-background-border);
+  }
+
+  .content {
+    padding: $iui-baseline $iui-l;
+  }
+
+  :global {
+    .iui-carousel-navigation-dots {
+      display: flex;
+      justify-content: center;
+    }
+
+    .iui-carousel-slider-item {
+      display: flex;
+      justify-content: center;
+      padding: $iui-baseline $iui-l;
+    }
+  }
+}

@@ -1,49 +1,49 @@
 import { Anchor, Text } from "@itwin/itwinui-react";
 import React from "react";
-import SynchroListCard from "./SynchroListCard";
-import SynchroListItem from "./SynchroListItem";
+import ListCard from "./ListCard";
+import ListItem from "./ListItem";
 
 export type CreateCardProps = {};
 
 const CreateCard = (props: CreateCardProps) => {
   return (
-    <SynchroListCard title="My Work">
-      <SynchroListItem>
+    <ListCard title="My Work">
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Change Order</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Daily Log</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Issue</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Observation</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Payment Application</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">Potential Change Order</Text>
         </Anchor>
-      </SynchroListItem>
-      <SynchroListItem>
+      </ListItem>
+      <ListItem>
         <Anchor>
           <Text variant="subheading">RFI</Text>
         </Anchor>
-      </SynchroListItem>
-    </SynchroListCard>
+      </ListItem>
+    </ListCard>
   );
 };
 

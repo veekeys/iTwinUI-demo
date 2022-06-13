@@ -1,8 +1,8 @@
 import { Text } from "@itwin/itwinui-react";
 import React from "react";
-import styles from "./SynchroListItem.module.scss";
+import styles from "./ListItem.module.scss";
 
-export type SynchroListItemProps = {
+export type ListItemProps = {
   number?: string;
   name?: string;
   date?: string;
@@ -11,7 +11,7 @@ export type SynchroListItemProps = {
   children?: React.ReactNode;
 };
 
-export const SynchroListItem = (props: SynchroListItemProps) => {
+export const ListItem = (props: ListItemProps) => {
   const { number, name, date, state, icon, children } = props;
   return (
     <div className={styles["activity-list-item"]}>
@@ -39,4 +39,4 @@ export const SynchroListItem = (props: SynchroListItemProps) => {
   );
 };
 
-export default SynchroListItem;
+export default ListItem;

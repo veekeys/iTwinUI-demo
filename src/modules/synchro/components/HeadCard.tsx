@@ -2,9 +2,9 @@ import { SvgStarHollow } from "@itwin/itwinui-icons-react";
 import { Anchor, Surface, Text } from "@itwin/itwinui-react";
 import { useOverflow } from "@itwin/itwinui-react/esm/core/utils";
 import React from "react";
-import styles from "./SynchroHeadCard.module.scss";
+import styles from "./HeadCard.module.scss";
 
-export const SynchroHeadCard = () => {
+export const HeadCard = () => {
   const [weatherRef, visibleDaysCount] = useOverflow(weatherDays);
   return (
     <Surface elevation={1} className={styles["synchro-head-card"]}>
@@ -128,11 +128,12 @@ const weatherDays = [
     tempMax={25}
     tempMin={17}
     description="Sunny"
+    key='wed'
   />,
-  <WeatherDay day="THU" icon={<PartlyCloudyIcon />} tempMax={20} tempMin={12} description="Partly cloudy" />,
-  <WeatherDay day="FRI" icon={<ThunderstormsIcon />} tempMax={22} tempMin={15} description="Thunderstorms Early" />,
-  <WeatherDay day="SAT" icon={<ThunderstormsIcon />} tempMax={25} tempMin={18} description="Thunderstorms Early" />,
-  <WeatherDay day="SUN" icon={<PartlyCloudyIcon />} tempMax={17} tempMin={15} description="Partly cloudy" />,
+  <WeatherDay day="THU" icon={<PartlyCloudyIcon />} tempMax={20} tempMin={12} description="Partly cloudy" key='thu' />,
+  <WeatherDay day="FRI" icon={<ThunderstormsIcon />} tempMax={22} tempMin={15} description="Thunderstorms Early" key='fri' />,
+  <WeatherDay day="SAT" icon={<ThunderstormsIcon />} tempMax={25} tempMin={18} description="Thunderstorms Early" key='sat' />,
+  <WeatherDay day="SUN" icon={<PartlyCloudyIcon />} tempMax={17} tempMin={15} description="Partly cloudy" key='sun' />,
 ];
 
-export default SynchroHeadCard;
+export default HeadCard;

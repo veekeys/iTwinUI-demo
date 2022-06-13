@@ -3,9 +3,7 @@ import { Anchor, HorizontalTabs, Surface, Tab, Text } from "@itwin/itwinui-react
 import React from "react";
 import styles from "./SummaryCard.module.scss";
 
-export type SummaryCardProps = {};
-
-const SummaryCard = (props: SummaryCardProps) => {
+const SummaryCard = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   return (
     <Surface elevation={1} className={styles["summary-card"]}>

@@ -1,14 +1,14 @@
 import { Anchor, Surface, Text } from "@itwin/itwinui-react";
 import React from "react";
-import styles from "./SynchroListCard.module.scss";
+import styles from "./ListCard.module.scss";
 
-export type SynchroListCardProps = {
+export type ListCardProps = {
   title: string;
   children: React.ReactNode;
   footer?: string;
 };
 
-const SynchroListCard = (props: SynchroListCardProps) => {
+const ListCard = (props: ListCardProps) => {
   return (
     <Surface elevation={1} className={styles["synchro-list-card"]}>
       <div className={styles["card-title"]}>
@@ -24,4 +24,4 @@ const SynchroListCard = (props: SynchroListCardProps) => {
   );
 };
 
-export default SynchroListCard;
+export default ListCard;

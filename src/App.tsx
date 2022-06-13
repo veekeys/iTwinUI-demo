@@ -14,7 +14,7 @@ import {
 } from "@itwin/itwinui-react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
-import SynchroView from "./pages/SynchroView";
+import SynchroView from "./modules/synchro/SynchroView";
 
 function App() {
   const navigate = useNavigate();

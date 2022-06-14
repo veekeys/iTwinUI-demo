@@ -2,6 +2,7 @@ import { Anchor, Surface, Text, Title } from "@itwin/itwinui-react";
 import { SvgImodel, SvgUpload } from "@itwin/itwinui-icons-react";
 import FileUploadDemo from "./components/FileUploadDemo";
 import SelectiModelDemo from "./components/SelectiModelDemo";
+import PreviousSessionsDemo from "./components/PreviousSessionsDemo";
 
 const DesignReview = () => {
   return (
@@ -11,9 +12,7 @@ const DesignReview = () => {
       <FileUploadDemo />
       <SelectiModelDemo />
       <Text variant="subheading">Previous session</Text>
-      <div>
-        <Surface elevation={2}>hdashdlkajsdh</Surface>
-      </div>
+      <PreviousSessionsDemo />
     </div>
   );
 };

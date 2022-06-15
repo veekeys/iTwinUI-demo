@@ -13,6 +13,7 @@ const DesignReview = () => {
       <SelectiModelDemo />
       <Text variant="subheading">Previous session</Text>
       <PreviousSessionsDemo />
+      <Text variant="subheading">Previous session</Text>
     </div>
   );
 };

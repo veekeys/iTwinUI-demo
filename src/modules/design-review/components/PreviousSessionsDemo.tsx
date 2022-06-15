@@ -1,106 +1,129 @@
 import {
-  Anchor,
   Button,
-  Small,
+  getUserColor,
   Surface,
   Text,
-  Title,
+  UserIcon,
+  UserIconGroup,
 } from "@itwin/itwinui-react";
-import "./ReviewCard.css";
+import "./PreviousSessionsCard.css";
+import SYD from "../assets/SYD.jpeg";
+import NY from "../assets/NY.jpeg";
+import VNO from "../assets/VNO.jpeg";
+import RIO from "../assets/RIO.jpeg";
+import OSL from "../assets/OSL.jpeg";
+import LND from "../assets/LND.jpeg";
 
 const PreviousSessionsDemo = () => {
+  const sessionsList = [
+    {
+      title: "005 | Sydney",
+      description1: "Sydney City",
+      description2: "2 hours ago",
+      image: SYD,
+    },
+    {
+      title: "004 | Vilnius",
+      description1: "Vilnius Old town",
+      description2: "1 month ago",
+      image: VNO,
+    },
+    {
+      title: "003 | London",
+      description1: "London Eye",
+      description2: "almost 1 year ago",
+      image: LND,
+    },
+    {
+      title: "002 | Rio",
+      description1: "Rio Festival",
+      description2: "almost 1 year ago",
+      image: RIO,
+    },
+    {
+      title: "001 | Oslo",
+      description1: "Oslo Winter",
+      description2: "almost 2 years ago",
+      image: OSL,
+    },
+  ];
+
+  const users = [
+    {
+      name: "Brigita Symonds",
+      abbreviation: "BS",
+    },
+    {
+      name: "Roswitha Heinrich",
+      abbreviation: "RH",
+    },
+
+    {
+      name: "Teshub Hadžić",
+      abbreviation: "TH",
+    },
+    {
+      name: "Cléa Bryson",
+      abbreviation: "CB",
+    },
+    {
+      name: "Jean-Luc Trent",
+      abbreviation: "JT",
+    },
+    {
+      name: "Gavri'el Palomo",
+      abbreviation: "GP",
+    },
+    {
+      name: "Carolina Sokol",
+      abbreviation: "CS",
+    },
+    {
+      name: "Zephyros Feng",
+      abbreviation: "ZF",
+    },
+  ];
   return (
-    <Surface
-      elevation={1}
-      style={{
-        display: "grid",
-        gridTemplateColumns: "337px 1fr",
-      }}
-    >
-      <div
-        style={{
-          borderRight: "1px solid #dce0e3",
-          height: "100%",
-          display: "grid",
-          padding: "16px",
-          gridTemplateRows: "minmax(0,1fr) minmax(0,40px)",
-          overflow: "hidden",
-          gridRowGap: "8px",
-          alignItems: "center",
-          justifyItems: "center",
-          maxHeight: "278px",
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <div
-            style={{
-              overflow: "hidden",
-              height: "100%",
-              width: "100%",
-              background: "#000",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <img
-              style={{
-                objectFit: "cover",
-                maxWidth: "100%",
-                maxHeight: "100%",
-                display: "block",
-              }}
-              data-testid="img"
-              src="https://pwreviewprodeusbsa01.blob.core.windows.net/pwrthumbnails/0f3228ac-00c7-4a88-961c-3f671a8a396e.png?st=2022-06-14T07%3A55%3A15Z&amp;se=2022-06-14T08%3A55%3A15Z&amp;sp=racwdl&amp;spr=https%2Chttp&amp;sv=2018-03-28&amp;sr=b&amp;sig=VrqTVEvkpnaPyhDAcrHh%2FuXkcanKxVPJFklbgIRgDa4%3D"
-              alt="iModel Preview"
-            />
-          </div>
-        </div>
+    <Surface elevation={1} className="card-surface">
+      <div className="card-main-image">
+        <img className="image" src={NY} />
         <Button styleType="high-visibility">Open last session</Button>
       </div>
-      <div
-        style={{
-          padding: "12px 16px 16px",
-          display: "grid",
-          gridTemplateColumns: "minmax(0,1fr)",
-          gridTemplateRows: "32px 1fr",
-          gridRowGap: "12px",
-          overflow: "hidden",
-          alignItems: "center",
-          minWidth: "250px",
-        }}
-      >
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 3fr" }}>
-          <Small>Comments</Small>
-          <div></div>
+      <div className="card-comments-section">
+        <div className="card-top">
+          <Text className="card-top-left">Comments</Text>
+          <UserIconGroup className="card-top-right">
+            {users.map((user) => (
+              <UserIcon
+                title={user.name}
+                abbreviation={user.abbreviation}
+                backgroundColor={getUserColor(user.name)}
+              />
+            ))}
+          </UserIconGroup>
         </div>
-        <div
-          style={{
-            height: "100%",
-            minHeight: "216px",
-            gridColumn: "1/-1",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
-              gridRow: "1",
-              position: "absolute",
-              top: "0",
-              left: "0",
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <div></div>
+        <div className="card-bottom">
+          <div className="session-grid">
+            {sessionsList.map((card) => (
+              <div className="session-card">
+                <div
+                  style={{ width: "100%", height: "100%", overflow: "hidden" }}
+                >
+                  <img className="image" src={card.image} alt={card.title} />
+                </div>
+                <div className="session-card-text">
+                  <Text variant="small" className="session-card-text-header">
+                    {card.title}
+                  </Text>
+                  <Text variant="small" isMuted>
+                    {card.description1}
+                  </Text>
+                  <Text variant="small" isMuted>
+                    {card.description2}
+                  </Text>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

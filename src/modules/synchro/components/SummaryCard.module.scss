@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: $iui-baseline $iui-l;
   gap: $iui-baseline;
+  height: 100%;
 
   :global {
     .iui-tabs-content {

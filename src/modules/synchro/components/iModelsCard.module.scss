@@ -1,0 +1,41 @@
+@import "@itwin/itwinui-css/scss/variables";
+
+.imodels-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+
+  .title {
+    padding: $iui-baseline $iui-l;
+    border-bottom: 1px solid var(--iui-color-background-border);
+  }
+
+  .content {
+    padding: $iui-baseline $iui-l;
+  }
+
+  :global {
+    .iui-carousel {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .iui-carousel-slider {
+      flex-grow: 1;
+    }
+
+    .iui-carousel-navigation-dots {
+      display: flex;
+      justify-content: center;
+    }
+
+    .iui-carousel-slider-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $iui-baseline $iui-l;
+    }
+  }
+}

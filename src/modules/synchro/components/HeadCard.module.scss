@@ -1,0 +1,85 @@
+@import "@itwin/itwinui-css/scss/variables";
+
+.synchro-head-card {
+  display: flex;
+  height: 10 * $iui-baseline;
+  border: 1px solid red;
+}
+
+.project-image {
+  height: 100%;
+  width: 139px;
+  object-fit: cover;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  padding: $iui-baseline $iui-m;
+  flex-shrink: 0;
+}
+
+.project-name-container {
+  display: flex;
+  align-items: center;
+  gap: $iui-s;
+
+  svg {
+    width: $iui-icons-default;
+    height: $iui-icons-default;
+    cursor: pointer;
+  }
+}
+
+.weather-container {
+  display: flex;
+  align-items: center;
+  gap: $iui-l;
+  min-width: 0;
+  flex-grow: 1;
+  white-space: nowrap;
+  padding: $iui-baseline $iui-m;
+
+  .day-temp {
+    display: flex;
+    gap: $iui-s;
+  }
+}
+
+.weather-day {
+  svg {
+    width: $iui-icons-default;
+    height: $iui-icons-default;
+  }
+}
+
+.weather-current-day {
+  margin-left: auto;
+
+  .weather-info {
+    display: grid;
+    grid-template:
+      "icon current-temp" auto
+      "icon temp-range" auto;
+    column-gap: $iui-s;
+    align-content: center;
+  }
+
+  .weather-icon {
+    grid-area: icon;
+  }
+
+  .current-temp {
+    grid-area: current-temp;
+    font-weight: bold;
+  }
+
+  .temp-range {
+    grid-area: temp-range;
+  }
+  
+  svg {
+    width: 38px;
+    height: 38px;
+  }
+}

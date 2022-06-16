@@ -12,12 +12,14 @@ import {
   SidenavButton,
   SideNavigation,
 } from "@itwin/itwinui-react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
+import "@itwin/itwinui-layouts-css/styles.css";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import SynchroView from "./modules/synchro/SynchroView";
 import DesignReview from "./modules/design-review/DesignReview";
 
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="App">
@@ -52,6 +54,7 @@ function App() {
             startIcon={<SvgHome />}
             key={0}
             onClick={() => navigate("/")}
+            isActive={location.pathname === "/"}
           >
             iModels list
           </SidenavButton>,
@@ -59,6 +62,7 @@ function App() {
             startIcon={<SvgFlag />}
             key={1}
             onClick={() => navigate("design-review")}
+            isActive={location.pathname === "/design-review"}
           >
             Design Review
           </SidenavButton>,
@@ -66,6 +70,7 @@ function App() {
             startIcon={<SvgFolderOpened />}
             key={2}
             onClick={() => navigate("synchro")}
+            isActive={location.pathname === "/synchro"}
           >
             Synchro
           </SidenavButton>,
@@ -74,7 +79,7 @@ function App() {
       <Routes>
         <Route path="/" element={<div>Tiles view</div>} />
         <Route path="design-review" element={<DesignReview />} />
-        <Route path="synchro" element={<div>Synchro view</div>} />
+        <Route path="synchro" element={<SynchroView />} />
       </Routes>
     </div>
   );

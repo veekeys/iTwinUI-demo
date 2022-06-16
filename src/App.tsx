@@ -13,8 +13,9 @@ import {
   SideNavigation,
 } from "@itwin/itwinui-react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import "./App.css";
 import SynchroView from "./modules/synchro/SynchroView";
+import "@itwin/itwinui-layouts-css/styles.css";
+
 
 function App() {
   const navigate = useNavigate();

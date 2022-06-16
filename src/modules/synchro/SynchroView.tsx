@@ -6,7 +6,6 @@ import HeadCard from "./components/HeadCard";
 import IModelsCard from "./components/iModelsCard";
 import SummaryCard from "./components/SummaryCard";
 import { Grid } from "@itwin/itwinui-layouts-react";
-import "@itwin/itwinui-layouts-css/styles.css";
 
 const SynchroView = () => {
   return (

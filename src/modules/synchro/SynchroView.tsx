@@ -10,6 +10,7 @@ import "@itwin/itwinui-layouts-css/styles.css";
 
 const SynchroView = () => {
   return (
+    <>
       <Grid>
         <Grid.Item columnSpan={12}>
           <HeadCard />
@@ -70,6 +71,7 @@ const SynchroView = () => {
           <SummaryCard />
         </Grid.Item>
       </Grid>
+    </>
   );
 };
 

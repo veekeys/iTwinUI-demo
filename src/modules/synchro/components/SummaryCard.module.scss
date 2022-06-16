@@ -6,6 +6,7 @@
   padding: $iui-baseline $iui-l;
   gap: $iui-baseline;
   height: 100%;
+  border: 1px solid red;
 
   :global {
     .iui-tabs-content {

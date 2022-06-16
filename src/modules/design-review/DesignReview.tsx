@@ -3,6 +3,8 @@ import { SvgImodel, SvgUpload } from "@itwin/itwinui-icons-react";
 import FileUploadDemo from "./components/FileUploadDemo";
 import SelectiModelDemo from "./components/SelectiModelDemo";
 import PreviousSessionsDemo from "./components/PreviousSessionsDemo";
+import SessionsTableDemo from "./components/SessionsTableDemo";
+import SessionsSearchDemo from "./components/SessionsSearchDemo";
 
 const DesignReview = () => {
   return (
@@ -13,7 +15,9 @@ const DesignReview = () => {
       <SelectiModelDemo />
       <Text variant="subheading">Previous session</Text>
       <PreviousSessionsDemo />
-      <Text variant="subheading">Previous session</Text>
+      <Text variant="subheading">Sessions</Text>
+      <SessionsSearchDemo />
+      <SessionsTableDemo />
     </div>
   );
 };

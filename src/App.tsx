@@ -14,7 +14,7 @@ import {
 } from "@itwin/itwinui-react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import DesignReview from "./modules/design-review/DesignReview";
+import DesignReviewFinished from "./modules/design-review/DesignReview-finished";
 
 function App() {
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<div>Tiles view</div>} />
-        <Route path="design-review" element={<DesignReview />} />
+        <Route path="design-review" element={<DesignReviewFinished />} />
         <Route path="synchro" element={<div>Synchro view</div>} />
       </Routes>
     </div>

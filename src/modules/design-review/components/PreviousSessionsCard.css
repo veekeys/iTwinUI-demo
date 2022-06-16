@@ -1,3 +1,7 @@
+.card-title-text {
+  align-self: start;
+}
+
 .card-surface {
   display: grid;
   grid-template-columns: 337px 1fr;
@@ -48,7 +52,7 @@
 
 .card-bottom {
   height: 100%;
-  min-height: 216px;
+  min-height: 240px;
   grid-column: 1/-1;
   position: relative;
   overflow: hidden;
@@ -57,7 +61,7 @@
 .session-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: 216px auto;
+  grid-template-rows: 240px auto;
   position: absolute;
   top: 0;
   left: 0;

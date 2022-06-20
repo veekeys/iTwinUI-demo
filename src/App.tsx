@@ -19,13 +19,15 @@ import DesignReview from "./modules/design-review/DesignReview";
 import { PageLayout } from "@itwin/itwinui-layouts-react";
 import DesignReviewFinished from "./modules/design-review/DesignReview-finished";
 import SynchroViewFinished from "./modules/synchro/SynchroView-finished";
+import IModelsListView from "./modules/imodels-list/IModelsListView";
+import IModelsListViewFinished from "./modules/imodels-list/IModelsListView-finished";
 
 function MainContent() {
   return (
     <Routes>
-      <Route path="/" element={<div>Tiles view</div>} />
-      <Route path="design-review" element={<DesignReview />} />
-      <Route path="synchro" element={<SynchroView />} />
+      <Route path="/" element={<IModelsListViewFinished />} />
+      <Route path="design-review" element={<DesignReviewFinished />} />
+      <Route path="synchro" element={<SynchroViewFinished />} />
     </Routes>
   );
 }

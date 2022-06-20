@@ -15,7 +15,15 @@ const DesignReviewFinished = () => {
           iTwin Design Review - Ad Hoc Reviews
         </Text>
       </Grid.Item>
-      <Grid.Item columnSpan={3}>
+      <Grid.Item
+        columnSpan={{
+          monitor: 3,
+          smallMonitor: 3,
+          tablet: 12,
+          landscapeMobile: 12,
+          mobile: 12,
+        }}
+      >
         <Text
           style={{ alignSelf: "start", display: "flex", paddingBottom: "11px" }}
           variant="subheading"
@@ -23,15 +31,39 @@ const DesignReviewFinished = () => {
           New session
         </Text>
         <Grid>
-          <Grid.Item columnSpan={12}>
+          <Grid.Item
+            columnSpan={{
+              monitor: 12,
+              smallMonitor: 12,
+              tablet: 6,
+              landscapeMobile: 6,
+              mobile: 6,
+            }}
+          >
             <FileUploadDemo />
           </Grid.Item>
-          <Grid.Item columnSpan={12}>
+          <Grid.Item
+            columnSpan={{
+              monitor: 12,
+              smallMonitor: 12,
+              tablet: 6,
+              landscapeMobile: 6,
+              mobile: 6,
+            }}
+          >
             <SelectiModelDemo />
           </Grid.Item>
         </Grid>
       </Grid.Item>
-      <Grid.Item columnSpan={9}>
+      <Grid.Item
+        columnSpan={{
+          monitor: 9,
+          smallMonitor: 9,
+          tablet: 12,
+          landscapeMobile: 12,
+          mobile: 12,
+        }}
+      >
         <Text
           style={{ alignSelf: "start", display: "flex", paddingBottom: "11px" }}
           variant="subheading"
@@ -40,7 +72,15 @@ const DesignReviewFinished = () => {
         </Text>
         <PreviousSessionsDemo />
       </Grid.Item>
-      <Grid.Item columnSpan={3}>
+      <Grid.Item
+        columnSpan={{
+          monitor: 3,
+          smallMonitor: 3,
+          tablet: 3,
+          landscapeMobile: 3,
+          mobile: 3,
+        }}
+      >
         <Text
           style={{ alignSelf: "start", display: "flex" }}
           variant="subheading"
@@ -48,7 +88,16 @@ const DesignReviewFinished = () => {
           Sessions
         </Text>
       </Grid.Item>
-      <Grid.Item columnSpan={3} columnStart={10}>
+      <Grid.Item
+        columnSpan={{
+          monitor: 4,
+          smallMonitor: 4,
+          tablet: 4,
+          landscapeMobile: 4,
+          mobile: 4,
+        }}
+        columnStart={9}
+      >
         <SessionsSearchDemo />
       </Grid.Item>
       <Grid.Item columnSpan={12}>

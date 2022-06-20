@@ -5,10 +5,6 @@
   height: 10 * $iui-baseline;
 }
 
-svg {
-  fill: currentColor;
-}
-
 .project-image {
   height: 100%;
   width: 139px;
@@ -53,6 +49,7 @@ svg {
   svg {
     width: $iui-icons-default;
     height: $iui-icons-default;
+    fill: currentColor;
   }
 }
 

@@ -1,5 +1,5 @@
 import { Anchor, Surface, Text } from "@itwin/itwinui-react";
-import "./NewSessionCard.css";
+import styles from "./NewSessionCard.module.scss";
 import { ReactNode } from "react";
 
 export type NewSessionCardProps = {
@@ -10,7 +10,7 @@ export type NewSessionCardProps = {
 
 const NewSessionCard = ({ icon, title, subtitle }: NewSessionCardProps) => {
   return (
-    <Surface elevation={1} className="session-card-surface">
+    <Surface elevation={1} className={styles["session-card-surface"]}>
       {icon}
       <div>
         <Anchor>{title}</Anchor>

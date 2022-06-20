@@ -6,7 +6,7 @@ import {
   UserIcon,
   UserIconGroup,
 } from "@itwin/itwinui-react";
-import "./PreviousSessionsDemo.css";
+import styles from "./PreviousSessionsDemo.module.scss";
 import SYD from "../assets/SYD.jpeg";
 import NY from "../assets/NY.jpeg";
 import VNO from "../assets/VNO.jpeg";
@@ -84,15 +84,15 @@ const PreviousSessionsDemo = () => {
     },
   ];
   return (
-    <Surface elevation={1} className="card-surface">
-      <div className="card-main-image">
-        <img className="image" src={NY} />
+    <Surface elevation={1} className={styles["card-surface"]}>
+      <div className={styles["card-main-image"]}>
+        <img className={styles["image"]} src={NY} />
         <Button styleType="high-visibility">Open last session</Button>
       </div>
-      <div className="card-comments-section">
-        <div className="card-top">
-          <Text className="card-top-left">Comments</Text>
-          <UserIconGroup className="card-top-right">
+      <div className={styles["card-comments-section"]}>
+        <div className={styles["card-top"]}>
+          <Text className={styles["card-top-left"]}>Comments</Text>
+          <UserIconGroup className={styles["card-top-right"]}>
             {users.map((user) => (
               <UserIcon
                 title={user.name}
@@ -102,17 +102,24 @@ const PreviousSessionsDemo = () => {
             ))}
           </UserIconGroup>
         </div>
-        <div className="card-bottom">
-          <div className="session-grid">
+        <div className={styles["card-bottom"]}>
+          <div className={styles["session-grid"]}>
             {sessionsList.map((card) => (
-              <div className="session-card">
+              <div className={styles["session-card"]}>
                 <div
                   style={{ width: "100%", height: "100%", overflow: "hidden" }}
                 >
-                  <img className="image" src={card.image} alt={card.title} />
+                  <img
+                    className={styles["image"]}
+                    src={card.image}
+                    alt={card.title}
+                  />
                 </div>
-                <div className="session-card-text">
-                  <Text variant="small" className="session-card-text-header">
+                <div className={styles["session-card-text"]}>
+                  <Text
+                    variant="small"
+                    className={styles["session-card-text-header"]}
+                  >
                     {card.title}
                   </Text>
                   <Text variant="small" isMuted>

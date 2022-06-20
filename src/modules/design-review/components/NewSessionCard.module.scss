@@ -4,6 +4,7 @@
   gap: 24px;
   justify-content: center;
   align-items: center;
+  padding: 8px;
 }
 
 svg {
@@ -11,4 +12,5 @@ svg {
   display: inline-flex;
   width: 64px;
   height: 64px;
+  flex-shrink: 0;
 }

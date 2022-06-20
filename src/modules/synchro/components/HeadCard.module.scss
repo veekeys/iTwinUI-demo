@@ -3,7 +3,6 @@
 .synchro-head-card {
   display: flex;
   height: 10 * $iui-baseline;
-  border: 1px solid red;
 }
 
 .project-image {
@@ -50,6 +49,7 @@
   svg {
     width: $iui-icons-default;
     height: $iui-icons-default;
+    fill: currentColor;
   }
 }
 

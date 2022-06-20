@@ -3,7 +3,10 @@
 .synchro-head-card {
   display: flex;
   height: 10 * $iui-baseline;
-  border: 1px solid red;
+}
+
+svg {
+  fill: currentColor;
 }
 
 .project-image {

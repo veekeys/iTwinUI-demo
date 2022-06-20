@@ -1,25 +1,15 @@
-import {
-  Anchor,
-  Checkbox,
-  Input,
-  LabeledInput,
-  Surface,
-  Table,
-  Text,
-  Title,
-} from "@itwin/itwinui-react";
-import { SvgImodel, SvgSearch, SvgUpload } from "@itwin/itwinui-icons-react";
+import { Text } from "@itwin/itwinui-react";
 import FileUploadDemo from "./components/FileUploadDemo";
 import SelectiModelDemo from "./components/SelectiModelDemo";
 import PreviousSessionsDemo from "./components/PreviousSessionsDemo";
-import { Grid, PageLayout } from "@itwin/itwinui-layouts-react";
+import { Grid } from "@itwin/itwinui-layouts-react";
 import "@itwin/itwinui-layouts-css/styles.css";
 import SessionsTableDemo from "./components/SessionsTableDemo";
 import SessionsSearchDemo from "./components/SessionsSearchDemo";
 
 const DesignReviewFinished = () => {
   return (
-    <Grid style={{ margin: "22px" }}>
+    <Grid>
       <Grid.Item columnSpan={12}>
         <Text style={{ alignSelf: "start", display: "flex" }} variant="title">
           iTwin Design Review - Ad Hoc Reviews
@@ -58,7 +48,7 @@ const DesignReviewFinished = () => {
           Sessions
         </Text>
       </Grid.Item>
-      <Grid.Item columnSpan={9}>
+      <Grid.Item columnSpan={3} columnStart={10}>
         <SessionsSearchDemo />
       </Grid.Item>
       <Grid.Item columnSpan={12}>

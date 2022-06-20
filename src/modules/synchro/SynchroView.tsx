@@ -9,8 +9,14 @@ import { Grid } from "@itwin/itwinui-layouts-react";
 
 const SynchroView = () => {
   return (
-    <>
-      <Grid>
+    <div style={{ display: "flex", gap: 8, flexDirection: "column" }}>
+      <HeadCard />
+      <RecentActivityCard />
+      <MyWorkCard />
+      <CreateCard />
+      <IModelsCard />
+      <SummaryCard />
+      {/* <Grid>
         <Grid.Item columnSpan={12}>
           <HeadCard />
         </Grid.Item>
@@ -69,8 +75,8 @@ const SynchroView = () => {
         >
           <SummaryCard />
         </Grid.Item>
-      </Grid>
-    </>
+      </Grid> */}
+    </div>
   );
 };
 

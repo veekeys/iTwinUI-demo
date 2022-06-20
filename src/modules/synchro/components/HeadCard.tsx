@@ -8,7 +8,10 @@ export const HeadCard = () => {
   const [weatherRef, visibleDaysCount] = useOverflow(weatherDays);
   return (
     <Surface elevation={1} className={styles["synchro-head-card"]}>
-      <img src="/synchro-project-image.jpg" className={styles["project-image"]} />
+      <img
+        src="/synchro-project-image.jpg"
+        className={styles["project-image"]}
+      />
       <div className={styles["project-info"]}>
         <Text variant="small">Project used for the demo</Text>
         <div className={styles["project-name-container"]}>
@@ -128,12 +131,40 @@ const weatherDays = [
     tempMax={25}
     tempMin={17}
     description="Sunny"
-    key='wed'
+    key="wed"
   />,
-  <WeatherDay day="THU" icon={<PartlyCloudyIcon />} tempMax={20} tempMin={12} description="Partly cloudy" key='thu' />,
-  <WeatherDay day="FRI" icon={<ThunderstormsIcon />} tempMax={22} tempMin={15} description="Thunderstorms Early" key='fri' />,
-  <WeatherDay day="SAT" icon={<ThunderstormsIcon />} tempMax={25} tempMin={18} description="Thunderstorms Early" key='sat' />,
-  <WeatherDay day="SUN" icon={<PartlyCloudyIcon />} tempMax={17} tempMin={15} description="Partly cloudy" key='sun' />,
+  <WeatherDay
+    day="THU"
+    icon={<PartlyCloudyIcon />}
+    tempMax={20}
+    tempMin={12}
+    description="Partly cloudy"
+    key="thu"
+  />,
+  <WeatherDay
+    day="FRI"
+    icon={<ThunderstormsIcon />}
+    tempMax={22}
+    tempMin={15}
+    description="Thunderstorms Early"
+    key="fri"
+  />,
+  <WeatherDay
+    day="SAT"
+    icon={<ThunderstormsIcon />}
+    tempMax={25}
+    tempMin={18}
+    description="Thunderstorms Early"
+    key="sat"
+  />,
+  <WeatherDay
+    day="SUN"
+    icon={<PartlyCloudyIcon />}
+    tempMax={17}
+    tempMin={15}
+    description="Partly cloudy"
+    key="sun"
+  />,
 ];
 
 export default HeadCard;

@@ -1,5 +1,4 @@
-import { Anchor, Surface, Text, Title } from "@itwin/itwinui-react";
-import { SvgImodel, SvgUpload } from "@itwin/itwinui-icons-react";
+import { Text } from "@itwin/itwinui-react";
 import FileUploadDemo from "./components/FileUploadDemo";
 import SelectiModelDemo from "./components/SelectiModelDemo";
 import PreviousSessionsDemo from "./components/PreviousSessionsDemo";
@@ -8,7 +7,7 @@ import SessionsSearchDemo from "./components/SessionsSearchDemo";
 
 const DesignReview = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+    <>
       <Text variant="title">iTwin Design Review - Ad Hoc Reviews</Text>
       <Text variant="subheading">New session</Text>
       <FileUploadDemo />
@@ -18,7 +17,7 @@ const DesignReview = () => {
       <Text variant="subheading">Sessions</Text>
       <SessionsSearchDemo />
       <SessionsTableDemo />
-    </div>
+    </>
   );
 };
 

@@ -16,13 +16,25 @@ import "@itwin/itwinui-layouts-css/styles.css";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import SynchroView from "./modules/synchro/SynchroView";
 import DesignReview from "./modules/design-review/DesignReview";
+import { PageLayout } from "@itwin/itwinui-layouts-react";
+import DesignReviewFinished from "./modules/design-review/DesignReview-finished";
+
+function MainContent() {
+  return (
+    <Routes>
+      <Route path="/" element={<div>Tiles view</div>} />
+      <Route path="design-review" element={<DesignReview />} />
+      <Route path="synchro" element={<SynchroView />} />
+    </Routes>
+  );
+}
 
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
   return (
-    <div className="App">
+    <>
       <Header
         appLogo={
           <HeaderLogo
@@ -76,12 +88,8 @@ function App() {
           </SidenavButton>,
         ]}
       />
-      <Routes>
-        <Route path="/" element={<div>Tiles view</div>} />
-        <Route path="design-review" element={<DesignReview />} />
-        <Route path="synchro" element={<SynchroView />} />
-      </Routes>
-    </div>
+      <MainContent />
+    </>
   );
 }
 

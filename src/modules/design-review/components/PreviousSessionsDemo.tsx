@@ -6,7 +6,7 @@ import {
   UserIcon,
   UserIconGroup,
 } from "@itwin/itwinui-react";
-import "./PreviousSessionsCard.css";
+import "./PreviousSessionsDemo.css";
 import SYD from "../assets/SYD.jpeg";
 import NY from "../assets/NY.jpeg";
 import VNO from "../assets/VNO.jpeg";

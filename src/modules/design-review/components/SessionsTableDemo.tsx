@@ -1,20 +1,5 @@
 import React from "react";
-import {
-  Button,
-  getUserColor,
-  Surface,
-  Table,
-  Text,
-  UserIcon,
-  UserIconGroup,
-} from "@itwin/itwinui-react";
-import "./PreviousSessionsCard.css";
-import SYD from "../assets/SYD.jpeg";
-import NY from "../assets/NY.jpeg";
-import VNO from "../assets/VNO.jpeg";
-import RIO from "../assets/RIO.jpeg";
-import OSL from "../assets/OSL.jpeg";
-import LND from "../assets/LND.jpeg";
+import { Surface, Table } from "@itwin/itwinui-react";
 
 const SessionsTableDemo = () => {
   const columns = React.useMemo(

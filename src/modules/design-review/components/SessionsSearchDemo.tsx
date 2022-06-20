@@ -1,15 +1,10 @@
 import { SvgSearch } from "@itwin/itwinui-icons-react";
 import { Checkbox, LabeledInput } from "@itwin/itwinui-react";
+import "./SessionsSearchDemo.css";
 
 const SessionsSearchDemo = () => {
   return (
-    <div
-      style={{
-        justifyContent: "end",
-        display: "flex",
-        gap: "11px",
-      }}
-    >
+    <div className="search-container">
       <Checkbox label="Show closed sessions" />
       <LabeledInput
         placeholder="Search..."

@@ -18,6 +18,7 @@ import SynchroView from "./modules/synchro/SynchroView";
 import DesignReview from "./modules/design-review/DesignReview";
 import { PageLayout } from "@itwin/itwinui-layouts-react";
 import DesignReviewFinished from "./modules/design-review/DesignReview-finished";
+import SynchroViewFinished from "./modules/synchro/SynchroView-finished";
 
 function MainContent() {
   return (

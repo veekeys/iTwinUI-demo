@@ -1,4 +1,4 @@
-import { Text } from "@itwin/itwinui-react";
+import { Subheading, Text } from "@itwin/itwinui-react";
 import FileUploadDemo from "./components/FileUploadDemo";
 import SelectiModelDemo from "./components/SelectiModelDemo";
 import PreviousSessionsDemo from "./components/PreviousSessionsDemo";
@@ -18,26 +18,21 @@ const DesignReviewFinished = () => {
       <Grid.Item
         columnSpan={{
           monitor: 3,
-          smallMonitor: 3,
+          smallMonitor: 12,
           tablet: 12,
           landscapeMobile: 12,
           mobile: 12,
         }}
       >
-        <Text
-          style={{ alignSelf: "start", display: "flex", paddingBottom: "11px" }}
-          variant="subheading"
-        >
-          New session
-        </Text>
+        <Subheading>New session</Subheading>
         <Grid>
           <Grid.Item
             columnSpan={{
               monitor: 12,
-              smallMonitor: 12,
+              smallMonitor: 6,
               tablet: 6,
-              landscapeMobile: 6,
-              mobile: 6,
+              landscapeMobile: 12,
+              mobile: 12,
             }}
           >
             <FileUploadDemo />
@@ -45,10 +40,10 @@ const DesignReviewFinished = () => {
           <Grid.Item
             columnSpan={{
               monitor: 12,
-              smallMonitor: 12,
+              smallMonitor: 6,
               tablet: 6,
-              landscapeMobile: 6,
-              mobile: 6,
+              landscapeMobile: 12,
+              mobile: 12,
             }}
           >
             <SelectiModelDemo />
@@ -58,45 +53,33 @@ const DesignReviewFinished = () => {
       <Grid.Item
         columnSpan={{
           monitor: 9,
-          smallMonitor: 9,
+          smallMonitor: 12,
           tablet: 12,
           landscapeMobile: 12,
           mobile: 12,
         }}
       >
-        <Text
-          style={{ alignSelf: "start", display: "flex", paddingBottom: "11px" }}
-          variant="subheading"
-        >
-          Previous session
-        </Text>
+        <Subheading>Previous session</Subheading>
         <PreviousSessionsDemo />
       </Grid.Item>
-      <Grid.Item
-        columnSpan={{
-          monitor: 3,
-          smallMonitor: 3,
-          tablet: 3,
-          landscapeMobile: 3,
-          mobile: 3,
-        }}
-      >
-        <Text
-          style={{ alignSelf: "start", display: "flex" }}
-          variant="subheading"
-        >
-          Sessions
-        </Text>
+      <Grid.Item columnSpan={3}>
+        <Text variant="subheading">Sessions</Text>
       </Grid.Item>
       <Grid.Item
         columnSpan={{
           monitor: 4,
-          smallMonitor: 4,
-          tablet: 4,
+          smallMonitor: 7,
+          tablet: 8,
+          landscapeMobile: 9,
+          mobile: 9,
+        }}
+        columnStart={{
+          monitor: 9,
+          smallMonitor: 6,
+          tablet: 5,
           landscapeMobile: 4,
           mobile: 4,
         }}
-        columnStart={9}
       >
         <SessionsSearchDemo />
       </Grid.Item>

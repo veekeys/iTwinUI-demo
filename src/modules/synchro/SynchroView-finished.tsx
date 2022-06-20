@@ -17,7 +17,7 @@ const SynchroViewFinished = () => {
           monitor: 4,
           smallMonitor: 4,
           tablet: 6,
-          landscapeMobile: 6,
+          landscapeMobile: 12,
           mobile: 12,
         }}
       >
@@ -28,7 +28,7 @@ const SynchroViewFinished = () => {
           monitor: 4,
           smallMonitor: 4,
           tablet: 6,
-          landscapeMobile: 6,
+          landscapeMobile: 12,
           mobile: 12,
         }}
       >
@@ -39,7 +39,7 @@ const SynchroViewFinished = () => {
           monitor: 4,
           smallMonitor: 4,
           tablet: 6,
-          landscapeMobile: 6,
+          landscapeMobile: 12,
           mobile: 12,
         }}
       >
@@ -50,7 +50,7 @@ const SynchroViewFinished = () => {
           monitor: 4,
           smallMonitor: 4,
           tablet: 6,
-          landscapeMobile: 6,
+          landscapeMobile: 12,
           mobile: 12,
         }}
       >

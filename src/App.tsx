@@ -4,11 +4,14 @@ import {
   SvgImodel,
 } from "@itwin/itwinui-icons-react";
 import {
+  Button,
   Header,
   HeaderLogo,
   IconButton,
   SidenavButton,
   SideNavigation,
+  ThemeType,
+  useTheme,
 } from "@itwin/itwinui-react";
 import "@itwin/itwinui-layouts-css/styles.css";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
@@ -20,6 +23,22 @@ import SynchroViewFinished from "./modules/synchro/SynchroView-finished";
 import IModelsListView from "./modules/imodels-list/IModelsListView";
 import IModelsListViewFinished from "./modules/imodels-list/IModelsListView-finished";
 import { AppIcon, DesignReviewIcon, SynchroIcon } from "./icons";
+import { useState } from "react";
+
+function ThemeButton() {
+  const [theme, setTheme] = useState<ThemeType>("light");
+  useTheme(theme);
+
+  const changeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  return (
+    <Button styleType="borderless" onClick={changeTheme}>
+      {theme === "light" ? "🌞" : "🌙"}
+    </Button>
+  );
+}
 
 function MainContent() {
   return (
@@ -40,6 +59,7 @@ function App() {
       <Header
         appLogo={<HeaderLogo logo={<AppIcon />}>iTwinUI demo</HeaderLogo>}
         actions={[
+          <ThemeButton key="theme" />,
           <IconButton key="notification" styleType="borderless">
             <SvgNotification />
           </IconButton>,

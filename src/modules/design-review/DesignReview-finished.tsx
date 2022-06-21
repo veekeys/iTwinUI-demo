@@ -62,23 +62,31 @@ const DesignReviewFinished = () => {
         <Subheading>Previous session</Subheading>
         <PreviousSessionsDemo />
       </Grid.Item>
-      <Grid.Item columnSpan={3}>
+      <Grid.Item
+        columnSpan={{
+          monitor: 3,
+          smallMonitor: 3,
+          tablet: 3,
+          landscapeMobile: 12,
+          mobile: 12,
+        }}
+      >
         <Text variant="subheading">Sessions</Text>
       </Grid.Item>
       <Grid.Item
-        columnSpan={{
-          monitor: 4,
-          smallMonitor: 7,
-          tablet: 8,
-          landscapeMobile: 9,
-          mobile: 9,
-        }}
         columnStart={{
           monitor: 9,
           smallMonitor: 6,
           tablet: 5,
-          landscapeMobile: 4,
-          mobile: 4,
+          landscapeMobile: 1,
+          mobile: 1,
+        }}
+        columnSpan={{
+          monitor: 4,
+          smallMonitor: 7,
+          tablet: 8,
+          landscapeMobile: 12,
+          mobile: 12,
         }}
       >
         <SessionsSearchDemo />

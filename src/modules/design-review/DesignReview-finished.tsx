@@ -11,9 +11,7 @@ const DesignReviewFinished = () => {
   return (
     <Grid>
       <Grid.Item columnSpan={12}>
-        <Text style={{ alignSelf: "start", display: "flex" }} variant="title">
-          iTwin Design Review - Ad Hoc Reviews
-        </Text>
+        <Text variant="title">iTwin Design Review - Ad Hoc Reviews</Text>
       </Grid.Item>
       <Grid.Item
         columnSpan={{

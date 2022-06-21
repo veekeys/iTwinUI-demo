@@ -43,9 +43,9 @@ function ThemeButton() {
 function MainContent() {
   return (
     <Routes>
-      <Route path="/" element={<IModelsListViewFinished />} />
-      <Route path="design-review" element={<DesignReviewFinished />} />
-      <Route path="synchro" element={<SynchroViewFinished />} />
+      <Route path="/" element={<IModelsListView />} />
+      <Route path="design-review" element={<DesignReview />} />
+      <Route path="synchro" element={<SynchroView />} />
     </Routes>
   );
 }
@@ -56,56 +56,48 @@ function App() {
 
   return (
     <>
-      <PageLayout>
-        <PageLayout.Header>
-          <Header
-            appLogo={<HeaderLogo logo={<AppIcon />}>iTwinUI demo</HeaderLogo>}
-            actions={[
-              <ThemeButton key="theme" />,
-              <IconButton key="notification" styleType="borderless">
-                <SvgNotification />
-              </IconButton>,
-              <IconButton key="help" styleType="borderless">
-                <SvgHelpCircularHollow />
-              </IconButton>,
-            ]}
-          />
-        </PageLayout.Header>
-        <PageLayout.SideNavigation>
-          <SideNavigation
-            items={[
-              <SidenavButton
-                startIcon={<SvgImodel />}
-                key={0}
-                onClick={() => navigate("/")}
-                isActive={location.pathname === "/"}
-              >
-                iModels list
-              </SidenavButton>,
-              <SidenavButton
-                startIcon={<DesignReviewIcon />}
-                key={1}
-                onClick={() => navigate("design-review")}
-                isActive={location.pathname === "/design-review"}
-              >
-                Design Review
-              </SidenavButton>,
-              <SidenavButton
-                startIcon={<SynchroIcon />}
-                key={2}
-                onClick={() => navigate("synchro")}
-                isActive={location.pathname === "/synchro"}
-              >
-                Synchro
-              </SidenavButton>,
-            ]}
-            expanderPlacement="hidden"
-          />
-        </PageLayout.SideNavigation>
-        <PageLayout.Content padded>
-          <MainContent />
-        </PageLayout.Content>
-      </PageLayout>
+      <Header
+        appLogo={<HeaderLogo logo={<AppIcon />}>iTwinUI demo</HeaderLogo>}
+        actions={[
+          <ThemeButton key="theme" />,
+          <IconButton key="notification" styleType="borderless">
+            <SvgNotification />
+          </IconButton>,
+          <IconButton key="help" styleType="borderless">
+            <SvgHelpCircularHollow />
+          </IconButton>,
+        ]}
+      />
+      <SideNavigation
+        items={[
+          <SidenavButton
+            startIcon={<SvgImodel />}
+            key={0}
+            onClick={() => navigate("/")}
+            isActive={location.pathname === "/"}
+          >
+            iModels list
+          </SidenavButton>,
+          <SidenavButton
+            startIcon={<DesignReviewIcon />}
+            key={1}
+            onClick={() => navigate("design-review")}
+            isActive={location.pathname === "/design-review"}
+          >
+            Design Review
+          </SidenavButton>,
+          <SidenavButton
+            startIcon={<SynchroIcon />}
+            key={2}
+            onClick={() => navigate("synchro")}
+            isActive={location.pathname === "/synchro"}
+          >
+            Synchro
+          </SidenavButton>,
+        ]}
+        expanderPlacement="hidden"
+      />
+      <MainContent />
     </>
   );
 }

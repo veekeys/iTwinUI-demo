@@ -99,6 +99,7 @@ function App() {
                 Synchro
               </SidenavButton>,
             ]}
+            expanderPlacement="hidden"
           />
         </PageLayout.SideNavigation>
         <PageLayout.Content padded>

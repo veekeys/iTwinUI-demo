@@ -18,10 +18,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import SynchroView from "./modules/synchro/SynchroView";
 import DesignReview from "./modules/design-review/DesignReview";
 import { PageLayout } from "@itwin/itwinui-layouts-react";
-import DesignReviewFinished from "./modules/design-review/DesignReview-finished";
-import SynchroViewFinished from "./modules/synchro/SynchroView-finished";
 import IModelsListView from "./modules/imodels-list/IModelsListView";
-import IModelsListViewFinished from "./modules/imodels-list/IModelsListView-finished";
 import { AppIcon, DesignReviewIcon, SynchroIcon } from "./icons";
 import { useState } from "react";
 

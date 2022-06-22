@@ -37,7 +37,7 @@ const data = [
 
 const IModelsListView = () => {
   return (
-    <>
+    <FluidGrid>
       {new Array(30).fill(null).map((_, index) => {
         const el = data[index % data.length];
         return (
@@ -50,7 +50,7 @@ const IModelsListView = () => {
           />
         );
       })}
-    </>
+    </FluidGrid>
   );
 };
 
